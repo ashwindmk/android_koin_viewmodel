@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.BuilderActivity">
+
+    <TableLayout
+        android:id="@+id/builder_table"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3">
+
+        <TableRow>
+            <TextView
+                android:layout_column="0"
+                android:text="Software"
+                android:textStyle="bold"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_marginTop="12dp">
+            <TextView
+                android:layout_column="0"
+                android:text="Operating System"/>
+
+            <Spinner
+                android:id="@+id/os_spinner"
+                android:layout_column="1"
+                android:entries="@array/os"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_marginTop="12dp">
+            <TextView
+                android:layout_column="0"
+                android:text="Anti-virus"/>
+
+            <Spinner
+                android:id="@+id/av_spinner"
+                android:layout_column="1"
+                android:entries="@array/av"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_marginTop="24dp">
+            <TextView
+                android:layout_column="0"
+                android:text="Hardware"
+                android:textStyle="bold"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_marginTop="12dp">
+            <TextView
+                android:layout_column="0"
+                android:text="Processor"/>
+
+            <Spinner
+                android:id="@+id/proc_spinner"
+                android:layout_column="1"
+                android:entries="@array/proc"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_marginTop="12dp">
+            <TextView
+                android:layout_column="0"
+                android:text="RAM"/>
+
+            <Spinner
+                android:id="@+id/ram_spinner"
+                android:layout_column="1"
+                android:entries="@array/ram"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_marginTop="12dp">
+            <TextView
+                android:layout_column="0"
+                android:text="HDD"/>
+
+            <Spinner
+                android:id="@+id/hdd_spinner"
+                android:layout_column="1"
+                android:entries="@array/hdd"/>
+        </TableRow>
+
+    </TableLayout>
+
+    <Button
+        android:id="@+id/build_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BUILD"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/builder_table"
+        app:layout_constraintVertical_bias="0.2"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
